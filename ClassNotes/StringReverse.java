@@ -32,6 +32,8 @@ public class StringReverse
     {
         String strReversed = "";
         
-        for(int i = 0; i < str.
+        for(int i = 0; i < str.length(); i++)
+        {
+        }
     }
 }
