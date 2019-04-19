@@ -19,19 +19,21 @@ public class FractalTreePanel extends JPanel
     private double x,y;
     private double size;
     private double numBranches;
-    private static final int WIDTH = 1200, HEIGHT = 600;
-    private Color branchColor;
+    private static final int WIDTH = 1400, HEIGHT = 1200;
+    private int r,g,b = 0;
     
     public FractalTreePanel()
     {
-        this.degLeft = Math.PI/3;
-        this.degRight = Math.PI/3;
-        this.x = WIDTH * (2/3);
-        this.y = HEIGHT * (2/3);
-        this.size = HEIGHT * (1/2);
+        this.degLeft = Math.PI/6;
+        this.degRight = Math.PI/6;
+        this.x = WIDTH / 2;
+        this.y = 13* HEIGHT / 20;
+        this.size = 3 * HEIGHT / 13;
         this.numBranches = 24;
         this.setBackground(Color.black);
-        this.branchColor = Color.orange.brighter();
+        this.r = 50;
+        this.g = 220;
+        this.b = 255;
     }
     
     public Dimension getPreferredSize()
@@ -43,9 +45,9 @@ public class FractalTreePanel extends JPanel
     {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        g.setColor(branchColor);
-        FractalTreeComponent component = new FractalTreeComponent(degLeft, degRight, Math.PI/2, size, numBranches,
-            new Point2D.Double(x,y));
+        g.setColor(Color.MAGENTA);
+        FractalTreeComponent component = new FractalTreeComponent(degLeft, degRight, -  Math.PI/2, size, (double) 3/2,
+            new Point2D.Double(x,y), new Color(this.r,this.g,this.b));
         component.paintComponent(g2);
     }
 }

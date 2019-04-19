@@ -17,7 +17,7 @@ public class FractalTreeViewer extends JFrame
         this.setTitle("Fractal Tree Viewer");
         
         this.setLayout(new BorderLayout());
-        this.setSize(1000,500);
+        this.setSize(1600,1400);
         this.canvas = new FractalTreePanel();
         this.add(this.canvas, BorderLayout.CENTER);
         
