@@ -27,7 +27,7 @@ public class HeadAndTailRecursion
         if(str.length() == 0)
             return;
         
-        head(str.substring(1)); 
+        head(str.substring(1));
 
         System.out.print(str.charAt(0));
     }
